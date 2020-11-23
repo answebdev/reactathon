@@ -1,0 +1,15 @@
+.drop {
+  border-radius: 20px;
+  border: 1px solid steelblue;
+  padding: 40px;
+}
+
+.enter {
+  background-color: #efefef;
+  border: 2px solid green;
+}
+
+.exit {
+  background-color: #ffffff;
+  border: 1px solid steelblue;
+}

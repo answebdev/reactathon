@@ -1,0 +1,33 @@
+/* body {
+  font-size: 16px;
+  padding: 1rem;
+} */
+
+ul {
+  /* margin: 0 auto; */
+  max-width: 100%;
+  list-style: none;
+}
+
+.infinite-li {
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 100px;
+}
+
+/* .infinite-btn {
+  border-radius: 0px;
+  background: steelblue;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+} */
+
+#load-more {
+  font-size: 18px;
+}
+
+span {
+  display: block;
+  /* padding: 1rem 0px; */
+}
