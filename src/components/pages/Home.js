@@ -10,7 +10,7 @@ const Home = () => {
     <Container>
       <div style={{ marginTop: '40px', textAlign: 'center' }}>
         <h3>
-          <strong>Misc React Projects</strong>
+          <strong>React Projects</strong>
         </h3>
         <hr />
         <div style={{ textAlign: 'left' }}>
