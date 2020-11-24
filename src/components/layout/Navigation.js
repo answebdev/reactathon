@@ -1,18 +1,29 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
-import { Nav, Navbar } from 'react-bootstrap';
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+// import { Nav, Navbar } from 'react-bootstrap';
+import '../styles/Navigation.css';
 
-const Navigation = () => {
+const Navigation = ({ title }) => {
   return (
-    <div>
-      <Navbar bg='primary' variant='dark'>
-        <Navbar.Brand href='/'>Reactathon</Navbar.Brand>
-        <Nav className='mr-auto'>
-          <Nav.Link href='/'>Home</Nav.Link>
-        </Nav>
-      </Navbar>
-    </div>
+    <Fragment>
+      <div className='navbar bg-primary'>
+        <a href='/'>
+          <p className='nav-title'>{title}</p>
+        </a>
+        <div id='links'>
+          <ul>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </Fragment>
   );
+};
+
+Navigation.defaultProps = {
+  title: 'Reactathon',
 };
 
 export default Navigation;

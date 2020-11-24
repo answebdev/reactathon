@@ -91,7 +91,7 @@ const InfiniteScroll = () => {
     <Container>
       <div className='App'>
         <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-          Infinite Scroll
+          <strong>Infinite Scroll</strong>
         </h3>
         <div>
           <p style={styles}>
@@ -124,8 +124,10 @@ const InfiniteScroll = () => {
                 >
                   <Card.Body>
                     <Card.Title>
-                      Governors Call On Gretchen Whitmer To Shut Down Their
-                      States So Residents Won’t Get Mad At Them
+                      <strong>
+                        Governors Call On Gretchen Whitmer To Shut Down Their
+                        States So Residents Won't Get Mad At Them
+                      </strong>
                     </Card.Title>
                     <Card.Subtitle className='mb-2 text-muted'>
                       The Onion
@@ -170,7 +172,8 @@ const InfiniteScroll = () => {
                   <li>
                     {/* When the user clicks the button, it will dispatch the 'start' event (see above in 'reducer' function). */}
                     <Button
-                      variant='primary'
+                      className='infinite-btn'
+                      variant='dark'
                       size='lg'
                       block
                       // className='infinite-btn'

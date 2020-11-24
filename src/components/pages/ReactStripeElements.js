@@ -10,7 +10,7 @@ const ReactStripeElements = () => {
     <Container>
       <div className='App'>
         <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-          React Stripe Elements
+          <strong>React Stripe Elements</strong>
         </h3>
         <div>
           <p style={styles}>

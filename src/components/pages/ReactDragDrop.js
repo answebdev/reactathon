@@ -21,7 +21,7 @@ const ReactDragDrop = () => {
     <Container>
       <div className='App'>
         <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-          Drag n' Drop Files in React
+          <strong>Drag n' Drop Files in React</strong>
         </h3>
         <div>
           <p style={styles}>

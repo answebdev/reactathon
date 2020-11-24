@@ -14,14 +14,14 @@ const Home = () => {
       </Helmet>
       <Container>
         <div style={{ marginTop: '40px', textAlign: 'center' }}>
-          <h3>
+          <h2>
             <strong>React Projects</strong>
-          </h3>
+          </h2>
           <hr />
           <div style={{ textAlign: 'left' }}>
-            <h2>
+            <h3>
               <strong>Projects</strong>
-            </h2>
+            </h3>
             <ol>
               <li style={styles}>
                 Infinite Scroll &nbsp;| &nbsp;

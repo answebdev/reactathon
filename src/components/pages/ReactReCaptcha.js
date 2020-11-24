@@ -10,7 +10,7 @@ const ReactReCaptcha = () => {
     <Container>
       <div className='App'>
         <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-          Using reCAPTCHA in React and Node
+          <strong>Using reCAPTCHA in React and Node</strong>
         </h3>
         <div>
           <p style={styles}>

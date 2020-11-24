@@ -27,7 +27,7 @@ const GooglePlaces = () => {
     <Container>
       <div className='App'>
         <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-          Google Places: Autocomplete in React
+          <strong>Google Places: Autocomplete in React</strong>
         </h3>
         <div>
           <p style={styles}>
