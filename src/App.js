@@ -1,12 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/pages/Home';
-
 import InfiniteScroll from './components/pages/InfiniteScroll';
 import MapboxReact from './components/pages/MapboxReact';
 import ReactDragDrop from './components/pages/ReactDragDrop';
 import ReactPagination from './components/pages/ReactPagination';
-import NotRenderReact from './components/pages/NotRenderReact';
 import GooglePlaces from './components/pages/GooglePlaces';
 import ReactStripeElements from './components/pages/ReactStripeElements';
 import ReactReCaptcha from './components/pages/ReactReCaptcha';
@@ -25,7 +23,6 @@ function App() {
           <Route exact path='/mapbox-react' component={MapboxReact} />
           <Route exact path='/react-drag-n-drop' component={ReactDragDrop} />
           <Route exact path='/react-pagination' component={ReactPagination} />
-          <Route exact path='/not-render-react' component={NotRenderReact} />
           <Route exact path='/google-places' component={GooglePlaces} />
           <Route
             exact

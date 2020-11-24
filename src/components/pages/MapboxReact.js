@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import * as parkData from '../data/skateboard-parks.json';
@@ -49,161 +50,166 @@ const MapboxReact = () => {
   };
 
   return (
-    <Container>
-      <div className='App'>
-        <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-          <strong>Mapbox React</strong>
-        </h3>
-        <div>
-          <p style={styles}>
-            View the video&nbsp;
-            <a
-              href='https://www.youtube.com/watch?v=JJatzkPcmoI'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              here
-            </a>
-            . See the code&nbsp;
-            <a
-              href='https://github.com/leighhalliday/mapbox-react-demo'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              here
-            </a>
-            .
-            <p>
-              Note: Need to figure out how to get Mapbox access token working
-              while in <strong>.env.local</strong> (Mapbox access token is
-              currently defined as a variable and used in main file).
-            </p>
-          </p>
-          <p style={styles}>
-            Resources:
-            <ul>
-              <li>
-                REACT-MAP-GL &nbsp;| &nbsp;
-                <a
-                  href='https://visgl.github.io/react-map-gl/'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-              <li>
-                REACT-MAP-GL (NPM) &nbsp;| &nbsp;
-                <a
-                  href='https://www.npmjs.com/package/react-map-gl'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-              <li>
-                GPS Coordinates &nbsp;| &nbsp;
-                <a
-                  href='https://www.gps-coordinates.net/'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-              <li>
-                Mapbox Account Sign-in &nbsp;| &nbsp;
-                <a
-                  href='https://account.mapbox.com/auth/signin/?route-to=%22https://account.mapbox.com/%22'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-              <li>
-                Mapbox Styles &nbsp;| &nbsp;
-                <a
-                  href='https://www.mapbox.com/gallery/'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-              <li>
-                Use Mapbox GL JS in a React App &nbsp;| &nbsp;
-                <a
-                  href='https://docs.mapbox.com/help/tutorials/use-mapbox-gl-js-with-react/'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-              <li>
-                Open Ottawa (Data Used) &nbsp;| &nbsp;
-                <a
-                  href='https://open.ottawa.ca/'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-            </ul>
-          </p>
-          <hr />
-        </div>
-        <div style={{ marginBottom: '40px' }}>
-          <ReactMapGL
-            {...viewport}
-            mapboxApiAccessToken={TOKEN}
-            // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-            mapStyle='mapbox://styles/answebdev/ckhp3rta60d2l19piwffs1aj5'
-            onViewportChange={(viewport) => {
-              setViewport(viewport);
-            }}
-          >
-            {parkData.features.map((park) => (
-              <Marker
-                key={park.properties.PARK_ID}
-                latitude={park.geometry.coordinates[1]}
-                longitude={park.geometry.coordinates[0]}
+    <div>
+      <Helmet>
+        <title>Reactathon | Mapbox React</title>
+      </Helmet>
+      <Container>
+        <div className='App'>
+          <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
+            <strong>Mapbox React</strong>
+          </h3>
+          <div>
+            <p style={styles}>
+              View the video&nbsp;
+              <a
+                href='https://www.youtube.com/watch?v=JJatzkPcmoI'
+                rel='noopener noreferrer'
+                target='_blank'
               >
-                {/* Click event for popup info: */}
-                <button
-                  className='marker-btn'
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setSelectedPark(park);
+                here
+              </a>
+              . See the code&nbsp;
+              <a
+                href='https://github.com/leighhalliday/mapbox-react-demo'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+                here
+              </a>
+              .
+              <p>
+                Note: Need to figure out how to get Mapbox access token working
+                while in <strong>.env.local</strong> (Mapbox access token is
+                currently defined as a variable and used in main file).
+              </p>
+            </p>
+            <p style={styles}>
+              Resources:
+              <ul>
+                <li>
+                  REACT-MAP-GL &nbsp;| &nbsp;
+                  <a
+                    href='https://visgl.github.io/react-map-gl/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+                <li>
+                  REACT-MAP-GL (NPM) &nbsp;| &nbsp;
+                  <a
+                    href='https://www.npmjs.com/package/react-map-gl'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+                <li>
+                  GPS Coordinates &nbsp;| &nbsp;
+                  <a
+                    href='https://www.gps-coordinates.net/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+                <li>
+                  Mapbox Account Sign-in &nbsp;| &nbsp;
+                  <a
+                    href='https://account.mapbox.com/auth/signin/?route-to=%22https://account.mapbox.com/%22'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+                <li>
+                  Mapbox Styles &nbsp;| &nbsp;
+                  <a
+                    href='https://www.mapbox.com/gallery/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+                <li>
+                  Use Mapbox GL JS in a React App &nbsp;| &nbsp;
+                  <a
+                    href='https://docs.mapbox.com/help/tutorials/use-mapbox-gl-js-with-react/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+                <li>
+                  Open Ottawa (Data Used) &nbsp;| &nbsp;
+                  <a
+                    href='https://open.ottawa.ca/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+              </ul>
+            </p>
+            <hr />
+          </div>
+          <div style={{ marginBottom: '40px' }}>
+            <ReactMapGL
+              {...viewport}
+              mapboxApiAccessToken={TOKEN}
+              // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+              mapStyle='mapbox://styles/answebdev/ckhp3rta60d2l19piwffs1aj5'
+              onViewportChange={(viewport) => {
+                setViewport(viewport);
+              }}
+            >
+              {parkData.features.map((park) => (
+                <Marker
+                  key={park.properties.PARK_ID}
+                  latitude={park.geometry.coordinates[1]}
+                  longitude={park.geometry.coordinates[0]}
+                >
+                  {/* Click event for popup info: */}
+                  <button
+                    className='marker-btn'
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSelectedPark(park);
+                    }}
+                  >
+                    <img src='/skateboarding.svg' alt='Skate Park Icon' />
+                  </button>
+                </Marker>
+              ))}
+
+              {/* If there is a selected park, show a popup (need to import Popup above - line 3): */}
+              {selectedPark ? (
+                <Popup
+                  latitude={selectedPark.geometry.coordinates[1]}
+                  longitude={selectedPark.geometry.coordinates[0]}
+                  onClose={() => {
+                    setSelectedPark(null);
                   }}
                 >
-                  <img src='/skateboarding.svg' alt='Skate Park Icon' />
-                </button>
-              </Marker>
-            ))}
-
-            {/* If there is a selected park, show a popup (need to import Popup above - line 3): */}
-            {selectedPark ? (
-              <Popup
-                latitude={selectedPark.geometry.coordinates[1]}
-                longitude={selectedPark.geometry.coordinates[0]}
-                onClose={() => {
-                  setSelectedPark(null);
-                }}
-              >
-                <div>
-                  <h2>{selectedPark.properties.NAME}</h2>
-                  <p>{selectedPark.properties.DESCRIPTIO}</p>
-                </div>
-              </Popup>
-            ) : null}
-          </ReactMapGL>
+                  <div>
+                    <h2>{selectedPark.properties.NAME}</h2>
+                    <p>{selectedPark.properties.DESCRIPTIO}</p>
+                  </div>
+                </Popup>
+              ) : null}
+            </ReactMapGL>
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

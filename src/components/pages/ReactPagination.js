@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
 import axios from 'axios';
 import Posts from './Posts';
@@ -73,67 +74,72 @@ const ReactPagination = () => {
   };
 
   return (
-    <Container>
-      <div className='App'>
-        <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-          <strong>React Pagination</strong>
-        </h3>
-        <div>
-          <p style={styles}>
-            View the video&nbsp;
-            <a
-              href='https://www.youtube.com/watch?v=IYCa1F-OWmk'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              here
-            </a>
-            . See the code&nbsp;
-            <a
-              href='https://github.com/bradtraversy/simple_react_pagination'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              here
-            </a>
-            .
-          </p>
-          <p style={styles}>
-            Resources:
-            <ul>
-              <li>
-                JSON Placeholder &nbsp;| &nbsp;
-                <a
-                  href='http://jsonplaceholder.typicode.com/'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-              <li>
-                Axios &nbsp;| &nbsp;
-                <a
-                  href='https://www.npmjs.com/package/axios'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-            </ul>
-          </p>
-          <hr />
+    <div>
+      <Helmet>
+        <title>Reactathon | React Pagination</title>
+      </Helmet>
+      <Container>
+        <div className='App'>
+          <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
+            <strong>React Pagination</strong>
+          </h3>
+          <div>
+            <p style={styles}>
+              View the video&nbsp;
+              <a
+                href='https://www.youtube.com/watch?v=IYCa1F-OWmk'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+                here
+              </a>
+              . See the code&nbsp;
+              <a
+                href='https://github.com/bradtraversy/simple_react_pagination'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+                here
+              </a>
+              .
+            </p>
+            <p style={styles}>
+              Resources:
+              <ul>
+                <li>
+                  JSON Placeholder &nbsp;| &nbsp;
+                  <a
+                    href='http://jsonplaceholder.typicode.com/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+                <li>
+                  Axios &nbsp;| &nbsp;
+                  <a
+                    href='https://www.npmjs.com/package/axios'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+              </ul>
+            </p>
+            <hr />
+          </div>
+          <h1 className='text-primary mb-3'>My Blog</h1>
+          <Posts posts={currentPosts} loading={loading} />
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={posts.length}
+            paginate={paginate}
+          />
         </div>
-        <h1 className='text-primary mb-3'>My Blog</h1>
-        <Posts posts={currentPosts} loading={loading} />
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={posts.length}
-          paginate={paginate}
-        />
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 
