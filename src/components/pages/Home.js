@@ -1,9 +1,26 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
-import logo from '../../img/reactathon.png';
+// import logo from '../../img/reactathon.png';
+import { useSpring, animated } from 'react-spring';
+import '../../App.css';
+
+// React-Spring:
+const calc = (x, y) => [
+  -(y - window.innerHeight / 2) / 20,
+  (x - window.innerWidth / 2) / 20,
+  1.1,
+];
+const trans = (x, y, s) =>
+  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const Home = () => {
+  // React-Spring:
+  const [props, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: { mass: 5, tension: 350, friction: 40 },
+  }));
+
   const styles = {
     fontSize: '16px',
   };
@@ -65,7 +82,16 @@ const Home = () => {
             </div>
           </Col>
           <Col md={5}>
-            <Image
+            <animated.div
+              class='react-spring-card'
+              onMouseMove={({ clientX: x, clientY: y }) =>
+                set({ xys: calc(x, y) })
+              }
+              onMouseLeave={() => set({ xys: [0, 0, 1] })}
+              style={{ transform: props.xys.interpolate(trans) }}
+            />
+            {/* <Image
+              id='logo'
               alt='Reactathon Logo'
               src={logo}
               style={{
@@ -74,7 +100,42 @@ const Home = () => {
                 marginBottom: '40px',
               }}
               fluid
-            />
+            /> */}
+          </Col>
+        </Row>
+        <Row>
+          <Col md={12}>
+            <h3>
+              <strong>Notes</strong>
+            </h3>
+            <p>
+              The Reactathon logo was created using{' '}
+              <a
+                href='https://www.canva.com/'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+                Canva
+              </a>
+              . The animation was made using&nbsp;
+              <a
+                href='https://www.react-spring.io/'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+                React-Spring
+              </a>
+              . The sandbox can be seen&nbsp;
+              <a
+                href='https://codesandbox.io/embed/rj998k4vmm'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+                here
+              </a>
+              .
+            </p>
+            <br />
           </Col>
         </Row>
       </Container>
