@@ -6,8 +6,8 @@ import * as parkData from '../data/skateboard-parks.json';
 import '../styles/Mapbox.css';
 
 const MapboxReact = () => {
-  const TOKEN =
-    'pk.eyJ1IjoiYW5zd2ViZGV2IiwiYSI6ImNraG54eXduNzBicXQycW1pdWh0MjI3cW8ifQ.j2dXhA2inqmrC9MotbCn-A';
+  // const TOKEN =
+  //   'pk.eyJ1IjoiYW5zd2ViZGV2IiwiYSI6ImNraG54eXduNzBicXQycW1pdWh0MjI3cW8ifQ.j2dXhA2inqmrC9MotbCn-A';
 
   const [viewport, setViewport] = useState({
     latitude: 45.421106,
@@ -80,8 +80,9 @@ const MapboxReact = () => {
               .
               <p>
                 Note: Need to figure out how to get Mapbox access token working
-                while in <strong>.env.local</strong> (Mapbox access token is
-                currently defined as a variable and used in main file).
+                while in <strong>.env.local</strong> (4:35 in video) (Mapbox
+                access token is currently defined as a variable and used in main
+                file).
               </p>
             </p>
             <p style={styles}>
@@ -164,8 +165,8 @@ const MapboxReact = () => {
           <div style={{ marginBottom: '40px' }}>
             <ReactMapGL
               {...viewport}
-              mapboxApiAccessToken={TOKEN}
-              // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+              // mapboxApiAccessToken={TOKEN}
+              mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
               mapStyle='mapbox://styles/answebdev/ckhp3rta60d2l19piwffs1aj5'
               onViewportChange={(viewport) => {
                 setViewport(viewport);
