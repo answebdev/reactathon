@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import * as parkData from '../data/skateboard-parks.json';
+import mapboxTokens from '../../pdf/mapbox-tokens.pdf';
 import '../styles/Mapbox.css';
 
 const MapboxReact = () => {
@@ -78,11 +79,6 @@ const MapboxReact = () => {
                 here
               </a>
               .
-              <p>
-                Note: Need to figure out how to get Mapbox access token working
-                while in <strong>.env.local</strong> (Mapbox access token is
-                currently defined as a variable and used in main file).
-              </p>
             </p>
             <p style={styles}>
               Resources:
@@ -151,6 +147,17 @@ const MapboxReact = () => {
                   Open Ottawa (Data Used) &nbsp;| &nbsp;
                   <a
                     href='https://open.ottawa.ca/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                </li>
+                <li>
+                  Using Mapbox Tokens (Notes) &nbsp;| &nbsp;
+                  <a
+                    src={mapboxTokens}
+                    href={mapboxTokens}
                     rel='noopener noreferrer'
                     target='_blank'
                   >
