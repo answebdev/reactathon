@@ -85,7 +85,7 @@ class ReactMotion extends Component {
               </div>
 
               <Row>
-                <Col md={4}>
+                <Col md={6}>
                   {/* Using the 'defaultStyle' prop -> x: -200 (this will begin off to the left of the screen at -200); opacity will start at 0.
                 Use the 'style' prop to say where we want to animate the default values TO -
                 we want it to animate to '0' - so, on the screen, where it's supposed to be */}
@@ -104,23 +104,24 @@ class ReactMotion extends Component {
                       // <Card style={{ opacity: style.opacity, width: '18rem' }}>
                       <Card
                         style={{
+                          width: '18rem',
                           transform: `translateX(${style.x}px)`,
                           opacity: style.opacity,
                         }}
                       >
                         <Card.Img
                           variant='top'
-                          src='https://images.pexels.com/photos/821653/pexels-photo-821653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+                          src='https://images.pexels.com/photos/3014826/pexels-photo-3014826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
                         />
                         <Card.Body>
                           <Card.Title>
-                            <strong>Camera</strong>
+                            <strong>Lorem Ipsum</strong>
                           </Card.Title>
                           <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.
                           </Card.Text>
-                          <Button variant='primary'>Go somewhere</Button>
+                          <Button variant='dark'>Go somewhere</Button>
                         </Card.Body>
                       </Card>
                     )}
