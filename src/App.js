@@ -5,6 +5,7 @@ import InfiniteScroll from './components/pages/InfiniteScroll';
 import MapboxReact from './components/pages/MapboxReact';
 import ReactDragDrop from './components/pages/ReactDragDrop';
 import ReactPagination from './components/pages/ReactPagination';
+import ReactMotion from './components/pages/ReactMotion';
 import GooglePlaces from './components/pages/GooglePlaces';
 import ReactStripeElements from './components/pages/ReactStripeElements';
 import ReactReCaptcha from './components/pages/ReactReCaptcha';
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/mapbox-react' component={MapboxReact} />
           <Route exact path='/react-drag-n-drop' component={ReactDragDrop} />
           <Route exact path='/react-pagination' component={ReactPagination} />
+          <Route exact path='/react-motion' component={ReactMotion} />
           <Route exact path='/google-places' component={GooglePlaces} />
           <Route
             exact

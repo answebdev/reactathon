@@ -65,6 +65,10 @@ const Home = () => {
                   <a href='/react-pagination'>View</a>
                 </li>
                 <li style={styles}>
+                  React Motion &nbsp;| &nbsp;
+                  <a href='/react-motion'>View</a>
+                </li>
+                <li style={styles}>
                   Google Places: Autocomplete in React (need working API key)
                   &nbsp;| &nbsp;
                   <a href='/google-places'>View</a>
