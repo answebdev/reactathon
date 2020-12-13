@@ -69,6 +69,10 @@ const Home = () => {
                   <a href='/react-motion'>View</a>
                 </li>
                 <li style={styles}>
+                  React Spring &nbsp;| &nbsp;
+                  <a href='/react-spring'>View</a>
+                </li>
+                <li style={styles}>
                   Google Places: Autocomplete in React (need working API key)
                   &nbsp;| &nbsp;
                   <a href='/google-places'>View</a>
