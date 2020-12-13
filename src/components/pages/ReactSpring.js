@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import { Container } from 'react-bootstrap';
 import { Transition, animated } from 'react-spring/renderprops';
 import ReactSpringComponent1 from './ReactSpringComponent1';
 import ReactSpringComponent2 from './ReactSpringComponent2';
@@ -26,15 +25,12 @@ class ReactSpring extends Component {
   toggle = (e) => this.setState({ showComponent3: !this.state.showComponent3 });
 
   render() {
-    const styles = {
-      fontSize: '16px',
-    };
     return (
       <div>
         <Helmet>
           <title>Reactathon | React Spring</title>
         </Helmet>
-        {/* <Container> */}
+
         <div className='App'>
           <div style={{ marginBottom: '40px' }}>
             <ReactSpringComponent1 />
@@ -59,48 +55,7 @@ class ReactSpring extends Component {
               }
             </Transition>
           </div>
-          <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-            <strong>React Spring</strong>
-          </h3>
-          <div>
-            <p style={styles}>
-              View the video&nbsp;
-              <a
-                href='https://www.youtube.com/watch?v=S8yn3-WpVV8'
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                here
-              </a>
-              . See the code&nbsp;
-              <a
-                href='https://codesandbox.io/s/q8vmryvzjw'
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                here
-              </a>
-              .
-            </p>
-            <p style={styles}>
-              Resources:
-              <ul>
-                <li>
-                  React-Spring &nbsp;| &nbsp;
-                  <a
-                    href='https://www.react-spring.io/'
-                    rel='noopener noreferrer'
-                    target='_blank'
-                  >
-                    View
-                  </a>
-                </li>
-              </ul>
-            </p>
-            <hr />
-          </div>
         </div>
-        {/* </Container> */}
       </div>
     );
   }

@@ -1,7 +1,46 @@
 import React, { Component } from 'react';
 import { Spring } from 'react-spring/renderprops';
+import Swal from 'sweetalert2';
 
 export class ReactSpringComponent2 extends Component {
+  handleInfo() {
+    Swal.fire({
+      title: '<strong>REACT SPRING</strong>',
+      icon: 'success',
+      html: `Video |
+       <a
+         href='https://www.youtube.com/watch?v=S8yn3-WpVV8'
+         rel='noopener noreferrer'
+         target='_blank'
+       >View
+       </a>
+       <br />
+       Code |
+              <a
+                href='https://codesandbox.io/s/q8vmryvzjw'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+             View
+              </a>
+              <br />
+              React-Spring |
+                  <a
+                    href='https://www.react-spring.io/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>`,
+      showCloseButton: true,
+      //   showCancelButton: true,
+      focusConfirm: false,
+      //   confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
+      //   confirmButtonAriaLabel: 'Thumbs up, great!',
+      //   cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+      //   cancelButtonAriaLabel: 'Thumbs down',
+    });
+  }
   render() {
     const c2Style = {
       background: 'slateblue',
@@ -16,7 +55,9 @@ export class ReactSpringComponent2 extends Component {
       border: 'none',
       textTransform: 'uppercase',
       margin: '15px 0',
+      marginRight: '10px',
     };
+
     return (
       <Spring
         from={{ opacity: 0 }}
@@ -45,6 +86,9 @@ export class ReactSpringComponent2 extends Component {
               and set that to whatever we want to happen, which is a method we'll call toggle (see <ReactSpringComponent2> in 'ReactSpring.js'). */}
               <button style={btn} onClick={this.props.toggle}>
                 Toggle Component 3
+              </button>
+              <button style={btn} type='submit' onClick={this.handleInfo}>
+                Page Info
               </button>
             </div>
           </div>
