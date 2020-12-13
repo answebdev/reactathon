@@ -31,6 +31,14 @@ export class ReactSpringComponent2 extends Component {
                     target='_blank'
                   >
                     View
+                  </a>
+                  <br />SweetAlert2 |
+                  <a
+                    href='https://sweetalert2.github.io/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
                   </a>`,
       showCloseButton: true,
       //   showCancelButton: true,
