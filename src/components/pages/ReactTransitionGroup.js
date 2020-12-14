@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
 import TransitionHome from './TransitionHome';
 import data from '../data/data';
+import Swal from 'sweetalert2';
 import { CSSTransition } from 'react-transition-group';
 import '../styles/ReactTransitionGroup.css';
 
@@ -13,6 +14,56 @@ class ReactTransitionGroup extends Component {
       appearHome: true,
       property: data.properties[0],
     };
+  }
+
+  handleInfo() {
+    Swal.fire({
+      title: '<strong>REACT TRANSITION GROUP</strong>',
+      icon: 'success',
+      html: `Video |
+       <a
+         href='https://www.youtube.com/watch?v=BZRyIOrWfHU'
+         rel='noopener noreferrer'
+         target='_blank'
+       >View
+       </a>
+       <br />
+       Code |
+              <a
+                href='https://github.com/Ihatetomatoes/react-transition-group-classes'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
+             View
+              </a>
+              <br />
+              React Transition Group |
+                  <a
+                    href='https://reactcommunity.org/react-transition-group/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                  <br />React Transition Group (NPM) |
+                  <a
+                    href='https://www.npmjs.com/package/react-transition-group'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>
+                  <br />React Transition Group (GitHub) |
+                  <a
+                    href='https://github.com/reactjs/react-transition-group'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    View
+                  </a>`,
+      showCloseButton: true,
+      focusConfirm: false,
+    });
   }
 
   toggleAppear = () => {
@@ -38,9 +89,16 @@ class ReactTransitionGroup extends Component {
   render() {
     const { appearHome, property } = this.state;
 
-    // const styles = {
-    //   fontSize: '16px',
-    // };
+    const btn = {
+      // background: '#333333',
+      // color: '#ffffff',
+      padding: '0.5rem 1rem',
+      border: 'none',
+      textTransform: 'uppercase',
+      margin: '15px 0',
+      marginRight: '10px',
+      borderRadius: '4px',
+    };
 
     return (
       <div>
@@ -52,80 +110,28 @@ class ReactTransitionGroup extends Component {
             <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
               <strong>React Transition Group</strong>
             </h3>
-            {/* <div>
-              <p style={styles}>
-                View the video&nbsp;
-                <a
-                  href='https://www.youtube.com/watch?v=BZRyIOrWfHU'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  here
-                </a>
-                . See the code&nbsp;
-                <a
-                  href='https://github.com/Ihatetomatoes/react-transition-group-classes'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  here
-                </a>
-                .
-              </p>
-              <p style={styles}>
-                Resources:
-                <ul>
-                  <li>
-                    React Transition Group &nbsp;| &nbsp;
-                    <a
-                      href='https://reactcommunity.org/react-transition-group/'
-                      rel='noopener noreferrer'
-                      target='_blank'
-                    >
-                      View
-                    </a>
-                  </li>
-                  <li>
-                    React Transition Group NPM &nbsp;| &nbsp;
-                    <a
-                      href='https://www.npmjs.com/package/react-transition-group'
-                      rel='noopener noreferrer'
-                      target='_blank'
-                    >
-                      View
-                    </a>
-                  </li>
-                  <li>
-                    React Transition Group (GitHub) &nbsp;| &nbsp;
-                    <a
-                      href='https://github.com/reactjs/react-transition-group'
-                      rel='noopener noreferrer'
-                      target='_blank'
-                    >
-                      View
-                    </a>
-                  </li>
-                </ul>
-              </p>
-              <hr />
-            </div> */}
+            <hr />
 
             <div style={{ marginBottom: '40px' }}>
-              <button onClick={() => this.toggleAppear()}>
-                Appear: {`${appearHome}`}
-              </button>
-              <button
-                onClick={() => this.nextProperty()}
-                disabled={property.index === data.properties.length - 1}
-              >
-                Next
-              </button>
-              <button
-                onClick={() => this.prevProperty()}
-                disabled={property.index === 0}
-              >
-                Prev
-              </button>
+              <div style={{ textAlign: 'center' }}>
+                <button
+                  style={btn}
+                  onClick={() => this.nextProperty()}
+                  disabled={property.index === data.properties.length - 1}
+                >
+                  Next
+                </button>
+                <button
+                  style={btn}
+                  onClick={() => this.prevProperty()}
+                  disabled={property.index === 0}
+                >
+                  Prev
+                </button>
+                <button style={btn} type='submit' onClick={this.handleInfo}>
+                  Page Info
+                </button>
+              </div>
               <CSSTransition
                 in={appearHome}
                 appear={true}

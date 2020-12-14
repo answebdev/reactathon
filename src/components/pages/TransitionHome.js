@@ -1,13 +1,10 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import Card from './Card';
+import CardX from './CardX';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Home = ({ property }) => {
   return (
     <div className='page'>
-      {/* <Row>
-        <Col md={6}> */}
       <TransitionGroup className='card-x-container'>
         <CSSTransition
           key={property._id}
@@ -16,11 +13,9 @@ const Home = ({ property }) => {
           //   classNames='slide'
           //   timeout={450}
         >
-          <Card property={property} />
+          <CardX property={property} />
         </CSSTransition>
       </TransitionGroup>
-      {/* </Col>
-      </Row> */}
     </div>
   );
 };

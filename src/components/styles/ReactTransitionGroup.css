@@ -64,11 +64,11 @@
 }
 
 /* Card */
-.card-x-container {
+/* .card-x-container {
   position: relative;
   max-width: 226px;
   margin: 0 auto;
-}
+} */
 
 .card-x {
   border: 3px #f3f3f3 solid;
@@ -80,7 +80,7 @@
   max-width: 220px;
   text-align: left;
   margin: 0 auto;
-
+  /* margin-bottom: 80px; */
   position: absolute;
   top: 0;
   left: 0;
