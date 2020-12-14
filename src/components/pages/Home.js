@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 // import logo from '../../img/reactathon.png';
 import { useSpring, animated } from 'react-spring';
@@ -71,6 +71,10 @@ const Home = () => {
                 <li style={styles}>
                   React Spring &nbsp;| &nbsp;
                   <a href='/react-spring'>View</a>
+                </li>
+                <li style={styles}>
+                  React Transition Group &nbsp;| &nbsp;
+                  <a href='/react-transition-group'>View</a>
                 </li>
                 <li style={styles}>
                   Google Places: Autocomplete in React (need working API key)

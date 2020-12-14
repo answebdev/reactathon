@@ -7,6 +7,7 @@ import ReactDragDrop from './components/pages/ReactDragDrop';
 import ReactPagination from './components/pages/ReactPagination';
 import ReactMotion from './components/pages/ReactMotion';
 import ReactSpring from './components/pages/ReactSpring';
+import ReactTransitionGroup from './components/pages/ReactTransitionGroup';
 import GooglePlaces from './components/pages/GooglePlaces';
 import ReactStripeElements from './components/pages/ReactStripeElements';
 import ReactReCaptcha from './components/pages/ReactReCaptcha';
@@ -27,6 +28,11 @@ function App() {
           <Route exact path='/react-pagination' component={ReactPagination} />
           <Route exact path='/react-motion' component={ReactMotion} />
           <Route exact path='/react-spring' component={ReactSpring} />
+          <Route
+            exact
+            path='/react-transition-group'
+            component={ReactTransitionGroup}
+          />
           <Route exact path='/google-places' component={GooglePlaces} />
           <Route
             exact

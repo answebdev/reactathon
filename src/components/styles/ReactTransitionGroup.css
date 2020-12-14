@@ -1,0 +1,155 @@
+/* appear - on page load */
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms linear;
+}
+
+/* enter */
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 300ms;
+}
+
+/* exit */
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms linear;
+}
+
+.fade-exit-done {
+  opacity: 0;
+}
+
+/* slide enter */
+.slide-enter {
+  opacity: 0;
+  transform: scale(0.97) translateY(5px);
+  z-index: 1;
+}
+
+.slide-enter.slide-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: opacity 3000ms linear 1000ms, transform 3000ms ease-in-out 1000ms;
+}
+
+/* slide exit */
+.slide-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.slide-exit.slide-exit-active {
+  opacity: 0;
+  transform: scale(0.97) translateY(5px);
+  transition: opacity 1500ms linear, transform 1500ms ease-out;
+}
+
+.slide-exit-done {
+  opacity: 0;
+}
+
+/* Card */
+.card-x-container {
+  position: relative;
+  max-width: 226px;
+  margin: 0 auto;
+}
+
+.card-x {
+  border: 3px #f3f3f3 solid;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s linear;
+  cursor: pointer;
+  background-color: #f3f3f3;
+  padding: 10px;
+  max-width: 220px;
+  text-align: left;
+  margin: 0 auto;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.card-x:hover {
+  background-color: #f3f3f3;
+  border-color: #f3f3f3;
+}
+
+.card-x img {
+  max-width: calc(100%);
+  margin: 0 auto;
+  display: block;
+}
+
+.card-x .index {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  line-height: 20px;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  padding: 0 10px;
+}
+
+.card-x .price {
+  margin: 0;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.card-x .details {
+  position: relative;
+}
+
+.card-x .features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-x .features li {
+  padding-left: 24px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.card-x .features li span {
+  display: none;
+}
+
+.card-x .features li.icon-bed {
+  background: url(../../assets/bed-left-side.svg) left center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.card-x .features li.icon-bath {
+  background: url(../../assets/bathtub.svg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.card-x .features li.icon-car {
+  background: url(../../assets/car-compact.svg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
