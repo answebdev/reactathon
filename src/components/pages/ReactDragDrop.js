@@ -1,7 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import parse from 'papaparse';
-import { Container, Button } from 'react-bootstrap';
+import { Container, Button, Image } from 'react-bootstrap';
+import modalImg from '../../assets/img/modal.png';
+import npm from '../../assets/img/npm-modal.png';
 
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
@@ -113,16 +115,32 @@ const ReactDragDrop = () => {
                 This is the React-Responsive-Modal in action. To use it, install
                 it:
                 <br />
-                <strong>npm i react-responsive-modal.</strong>
                 <br />
+                <Image
+                  alt='Install React Responsive Modal'
+                  src={npm}
+                  style={{
+                    width: '75%',
+                    height: 'auto',
+                    marginBottom: '40px',
+                  }}
+                  fluid
+                />
                 <br />
-                Then, at the top of the file you want to use it in, import it
+                Then, at the top of the file you want to use it in, import it,
                 along with the CSS:
                 <br />
-                <strong>import 'react-responsive-modal/styles.css'</strong>
                 <br />
-                <strong>import {Modal} from 'react-responsive-modal' </strong>
-                <br />
+                <Image
+                  alt='Import React Responsive Modal'
+                  src={modalImg}
+                  style={{
+                    width: '75%',
+                    height: 'auto',
+                    marginBottom: '40px',
+                  }}
+                  fluid
+                />
                 <br />
                 That's it. Then just add the code for the modal. View the{' '}
                 <a
