@@ -132,15 +132,15 @@ const ReactDragDrop = () => {
                 >
                   docs&nbsp;
                 </a>
-                and the NPM{' '}
+                and the
                 <a
                   href='https://www.npmjs.com/package/react-responsive-modal'
                   rel='noopener noreferrer'
                   target='_blank'
                 >
-                  site
+                  &nbsp;NPM&nbsp;
                 </a>
-                .
+                site.
               </p>
             </Modal>
           </div>
