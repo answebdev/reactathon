@@ -3,7 +3,11 @@ import React from 'react';
 const UsingStateOther = (props) => {
   return (
     <div>
-      <button onClick={props.textChange}>Change Greeting</button>
+      <button style={{ marginBottom: '20px' }} onClick={props.textChange}>
+        Change Greeting
+      </button>
+      <br />
+      <button onClick={props.modaled}>MODAL</button>
     </div>
   );
 };

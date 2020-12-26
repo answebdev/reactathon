@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { Container, Button } from 'react-bootstrap';
 import UsingStateOther from './UsingStateOther';
+import UsingStateModal from './UsingStateModal';
 
 class UsingState extends Component {
   state = {
     text: 'What is the date today?',
     greeting: 'Hello',
+    modal: false,
   };
 
   textHandler = () => {
@@ -15,6 +17,14 @@ class UsingState extends Component {
 
   greetingHandler = () => {
     this.setState({ greeting: 'Goodbye' });
+  };
+
+  modalHandler = () => {
+    this.setState({ modal: true });
+  };
+
+  modalCloseHandler = () => {
+    this.setState({ modal: false });
   };
 
   render() {
@@ -39,7 +49,14 @@ class UsingState extends Component {
             <Button style={{ marginBottom: '20px' }} onClick={this.textHandler}>
               Click Here
             </Button>
-            <UsingStateOther textChange={this.greetingHandler} />
+            <UsingStateOther
+              textChange={this.greetingHandler}
+              modaled={this.modalHandler}
+            />
+            <UsingStateModal
+              show={this.state.modal}
+              modalClosed={this.modalCloseHandler}
+            />
           </div>
         </Container>
       </div>
