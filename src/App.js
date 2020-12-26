@@ -8,6 +8,7 @@ import ReactPagination from './components/pages/ReactPagination';
 import ReactMotion from './components/pages/ReactMotion';
 import ReactSpring from './components/pages/ReactSpring';
 import ReactTransitionGroup from './components/pages/ReactTransitionGroup';
+import UsingState from './components/pages/UsingState';
 import GooglePlaces from './components/pages/GooglePlaces';
 import ReactStripeElements from './components/pages/ReactStripeElements';
 import ReactReCaptcha from './components/pages/ReactReCaptcha';
@@ -33,6 +34,7 @@ function App() {
             path='/react-transition-group'
             component={ReactTransitionGroup}
           />
+          <Route exact path='/using-state' component={UsingState} />
           <Route exact path='/google-places' component={GooglePlaces} />
           <Route
             exact

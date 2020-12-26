@@ -77,6 +77,10 @@ const Home = () => {
                   <a href='/react-transition-group'>View</a>
                 </li>
                 <li style={styles}>
+                  Using State &nbsp;| &nbsp;
+                  <a href='/using-state'>View</a>
+                </li>
+                <li style={styles}>
                   Google Places: Autocomplete in React (need working API key)
                   &nbsp;| &nbsp;
                   <a href='/google-places'>View</a>
