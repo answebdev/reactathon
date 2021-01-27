@@ -65,3 +65,28 @@ class UsingState extends Component {
 }
 
 export default UsingState;
+
+// Get Greeting button using the 'useState' hook:
+
+// import React, { useState } from 'react';
+// import { Helmet } from 'react-helmet';
+// import { Container, Button } from 'react-bootstrap';
+// import UsingStateOther from './UsingStateOther';
+// import UsingStateModal from './UsingStateModal';
+
+// const UsingState = () => {
+//   const [greeting, setGreeting] = useState('Hello');
+
+//   function getGreeting() {
+//     setGreeting('Goodbye');
+//   }
+
+//   return (
+//     <div className='App'>
+//       <p>{greeting}</p>
+//       <Button onClick={() => getGreeting()}>Get Greeting</Button>
+//     </div>
+//   );
+// };
+
+// export default UsingState;

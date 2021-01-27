@@ -9,10 +9,10 @@ import ReactMotion from './components/pages/ReactMotion';
 import ReactSpring from './components/pages/ReactSpring';
 import ReactTransitionGroup from './components/pages/ReactTransitionGroup';
 import UsingState from './components/pages/UsingState';
+import PasswordGenerator from './components/pages/PasswordGenerator';
 import GooglePlaces from './components/pages/GooglePlaces';
 import ReactStripeElements from './components/pages/ReactStripeElements';
 import ReactReCaptcha from './components/pages/ReactReCaptcha';
-
 import Navigation from './components/layout/Navigation';
 import './App.css';
 
@@ -35,6 +35,11 @@ function App() {
             component={ReactTransitionGroup}
           />
           <Route exact path='/using-state' component={UsingState} />
+          <Route
+            exact
+            path='/password-generator'
+            component={PasswordGenerator}
+          />
           <Route exact path='/google-places' component={GooglePlaces} />
           <Route
             exact

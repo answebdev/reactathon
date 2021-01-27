@@ -81,6 +81,10 @@ const Home = () => {
                   <a href='/using-state'>View</a>
                 </li>
                 <li style={styles}>
+                  Password Generator &nbsp;| &nbsp;
+                  <a href='/password-generator'>View</a>
+                </li>
+                <li style={styles}>
                   Google Places: Autocomplete in React (need working API key)
                   &nbsp;| &nbsp;
                   <a href='/google-places'>View</a>
