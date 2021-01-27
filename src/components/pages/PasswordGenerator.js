@@ -72,7 +72,7 @@ class PasswordGenerator extends Component {
 
 export default PasswordGenerator;
 
-// Get Greeting button using the 'useState' hook:
+// Make Generator version using the 'useState' hook:
 
 // import React, { useState } from 'react';
 // import { Helmet } from 'react-helmet';
