@@ -85,12 +85,28 @@ const MusicAlbums = () => {
                         <Card className={classes.MainCards} key={artist.id}>
                           <Card.Img variant='top' src={artist.img} />
                           <Card.Body>
-                            <Card.Title>{artist.artist}</Card.Title>
+                            <Card.Title>
+                              <strong>{artist.artist}</strong>
+                            </Card.Title>
                             <Card.Text>
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
+                              <span className={classes.LeadInfo}>
+                                {' '}
+                                {artist.album}, {artist.year}
+                              </span>
+                              {artist.tracks.map((track, index) => (
+                                <div key={index}>
+                                  <p className={classes.Tracks}>{track}</p>
+                                </div>
+                              ))}
                             </Card.Text>
-                            <Button variant='dark'>Go somewhere</Button>
+                            <Button
+                              href={artist.website}
+                              rel='noopener noreferrer'
+                              target='_blank'
+                              variant='dark'
+                            >
+                              Website
+                            </Button>
                           </Card.Body>
                         </Card>
                       ) : null}

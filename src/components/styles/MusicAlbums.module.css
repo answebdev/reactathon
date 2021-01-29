@@ -2,6 +2,7 @@
   font-family: 'Quicksand', sans-serif;
   text-align: center;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .Button {
@@ -12,4 +13,13 @@
   width: 18rem;
   display: inline-block;
   text-align: left;
+}
+
+.LeadInfo {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.Tracks {
+  font-size: 14px;
 }
