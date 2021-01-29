@@ -1,0 +1,10 @@
+.MainHeader {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-weight: 700;
+}
+
+.MainCards {
+  width: 18rem;
+  display: inline-block;
+}
