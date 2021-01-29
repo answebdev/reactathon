@@ -30,6 +30,13 @@ const MusicAlbums = () => {
       });
   }
 
+  const artistStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridGap: '1rem',
+    textAlign: 'center',
+  };
+
   return (
     <div>
       <Helmet>
@@ -48,7 +55,11 @@ const MusicAlbums = () => {
           {/* If not isLoading, show a button to load the data, otherwise show a loading state */}
           {!isLoading ? (
             <div className='text-center'>
-              <Button variant='outline-dark' onClick={() => fetchMusic()}>
+              <Button
+                className={classes.Button}
+                variant='outline-dark'
+                onClick={() => fetchMusic()}
+              >
                 Get Music
               </Button>
             </div>
@@ -64,31 +75,33 @@ const MusicAlbums = () => {
           ) : null}
 
           <p>
-            {artists.map((artist) => {
-              return (
-                <Row>
-                  <Col>
-                    {/* <Col md={12}> */}
-                    {artists ? (
-                      <Card className={classes.MainCards} key={artist.id}>
-                        <Card.Img variant='top' src={artist.img} />
-                        <Card.Body>
-                          <Card.Title>{artist.artist}</Card.Title>
-                          <Card.Text>
-                            Some quick example text to build on the card title
-                            and make up the bulk of the card's content.
-                          </Card.Text>
-                          <Button variant='dark'>Go somewhere</Button>
-                        </Card.Body>
-                      </Card>
-                    ) : null}
+            <div style={artistStyle}>
+              {artists.map((artist) => {
+                return (
+                  <Row>
+                    <Col>
+                      {/* <Col md={12}> */}
+                      {artists ? (
+                        <Card className={classes.MainCards} key={artist.id}>
+                          <Card.Img variant='top' src={artist.img} />
+                          <Card.Body>
+                            <Card.Title>{artist.artist}</Card.Title>
+                            <Card.Text>
+                              Some quick example text to build on the card title
+                              and make up the bulk of the card's content.
+                            </Card.Text>
+                            <Button variant='dark'>Go somewhere</Button>
+                          </Card.Body>
+                        </Card>
+                      ) : null}
 
-                    {/* if there's no data and it's not loading, show a message */}
-                    {!artists && !isLoading ? <div>No data yet</div> : null}
-                  </Col>
-                </Row>
-              );
-            })}
+                      {/* if there's no data and it's not loading, show a message */}
+                      {!artists && !isLoading ? <div>No data yet</div> : null}
+                    </Col>
+                  </Row>
+                );
+              })}
+            </div>
           </p>
         </div>
       </Container>

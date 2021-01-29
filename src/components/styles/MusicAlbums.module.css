@@ -4,7 +4,12 @@
   font-weight: 700;
 }
 
+.Button {
+  margin-bottom: 40px;
+}
+
 .MainCards {
   width: 18rem;
   display: inline-block;
+  text-align: left;
 }
