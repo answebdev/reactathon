@@ -89,7 +89,7 @@ class PasswordGenerator extends Component {
       this.setState({ copyMessage: '' });
     }, 5000);
 
-    // Reset state of message to be able to get message again when copying more than once
+    // Reset state of message to be able to get message again when copying more than once.
     this.resetState({ copyMessage: '' });
   };
   initRef = (c) => (this.textContent = c);
@@ -114,10 +114,16 @@ class PasswordGenerator extends Component {
             value={this.state.userInput}
           />
           <p id='instructions'>
-            Please select the length of your password, from 1 to 50.
+            Please select the length of your password, from 1 to 50 characters.
           </p>
           <br />
-          <button id='pw-btn' onClick={this.createPassword}>
+          <button
+            style={{
+              backgroundColor: `${this.props.buttonColor}`,
+            }}
+            id='pw-btn'
+            onClick={this.createPassword}
+          >
             Generate Password
           </button>
 

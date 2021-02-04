@@ -89,6 +89,14 @@ const Home = () => {
                   <a href='/music-albums'>View</a>
                 </li>
                 <li style={styles}>
+                  Search Form &nbsp;| &nbsp;
+                  <a href='/search-form'>View</a>
+                </li>
+                <li style={styles}>
+                  Post Form &nbsp;| &nbsp;
+                  <a href='/post-form'>View</a>
+                </li>
+                <li style={styles}>
                   Google Places: Autocomplete in React (need working API key)
                   &nbsp;| &nbsp;
                   <a href='/google-places'>View</a>

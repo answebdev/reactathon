@@ -11,6 +11,8 @@ import ReactTransitionGroup from './components/pages/ReactTransitionGroup';
 import UsingState from './components/pages/UsingState';
 import PasswordGenerator from './components/pages/PasswordGenerator';
 import MusicAlbums from './components/pages/MusicAlbums';
+import SearchForm from './components/pages/SearchForm';
+import PostForm from './components/pages/PostForm';
 import GooglePlaces from './components/pages/GooglePlaces';
 import ReactStripeElements from './components/pages/ReactStripeElements';
 import ReactReCaptcha from './components/pages/ReactReCaptcha';
@@ -42,6 +44,8 @@ function App() {
             component={PasswordGenerator}
           />
           <Route exact path='/music-albums' component={MusicAlbums} />
+          <Route exact path='/search-form' component={SearchForm} />
+          <Route exact path='/post-form' component={PostForm} />
           <Route exact path='/google-places' component={GooglePlaces} />
           <Route
             exact
