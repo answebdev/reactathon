@@ -57,10 +57,6 @@ const Home = () => {
                   <a href='/mapbox-react'>View</a>
                 </li>
                 <li style={styles}>
-                  Drag n' Drop Files in React (not working) &nbsp;| &nbsp;
-                  <a href='/react-drag-n-drop'>View</a>
-                </li>
-                <li style={styles}>
                   React Pagination &nbsp;| &nbsp;
                   <a href='/react-pagination'>View</a>
                 </li>
@@ -95,20 +91,6 @@ const Home = () => {
                 <li style={styles}>
                   Post Form &nbsp;| &nbsp;
                   <a href='/post-form'>View</a>
-                </li>
-                <li style={styles}>
-                  Google Places: Autocomplete in React (need working API key)
-                  &nbsp;| &nbsp;
-                  <a href='/google-places'>View</a>
-                </li>
-                <li style={styles}>
-                  React Stripe Elements (not yet done) &nbsp;| &nbsp;
-                  <a href='/react-stripe-elements'>View</a>
-                </li>
-                <li style={styles}>
-                  Using reCAPTCHA in React and Node (not yet done) &nbsp;|
-                  &nbsp;
-                  <a href='/using-recaptcha-in-react-and-node'>View</a>
                 </li>
               </ol>
             </div>
