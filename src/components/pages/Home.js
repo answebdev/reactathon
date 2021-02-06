@@ -92,6 +92,10 @@ const Home = () => {
                   Post Form &nbsp;| &nbsp;
                   <a href='/post-form'>View</a>
                 </li>
+                <li style={styles}>
+                  Reminder App &nbsp;| &nbsp;
+                  <a href='/reminder-app'>View</a>
+                </li>
               </ol>
             </div>
           </Col>

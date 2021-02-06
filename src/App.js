@@ -12,6 +12,7 @@ import PasswordGenerator from './components/pages/PasswordGenerator';
 import MusicAlbums from './components/pages/MusicAlbums';
 import SearchForm from './components/pages/SearchForm';
 import PostForm from './components/pages/PostForm';
+import ReminderApp from './components/pages/ReminderApp';
 import Navigation from './components/layout/Navigation';
 import './App.css';
 
@@ -41,6 +42,7 @@ function App() {
           <Route exact path='/music-albums' component={MusicAlbums} />
           <Route exact path='/search-form' component={SearchForm} />
           <Route exact path='/post-form' component={PostForm} />
+          <Route exact path='/reminder-app' component={ReminderApp} />
         </Switch>
       </div>
     </Router>
