@@ -85,7 +85,7 @@ const Chart = () => {
           </div>
 
           <h3 className={classes.MainTitle}>Bar Chart</h3>
-          <div style={{ height: '50%', width: 'auto' }}>
+          <div className={classes.MainDiv}>
             <Bar
               data={{
                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -130,6 +130,7 @@ const Chart = () => {
               width={600}
               options={{
                 // In order for Chart.js to obey the custom size you need to set maintainAspectRatio to false.
+                // This will remove the scroll bar to fit everything onto the screen without scrolling.
                 // from react-chartjs-2 (NPM):
                 maintainAspectRatio: false,
                 scales: {
