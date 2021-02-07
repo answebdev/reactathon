@@ -93,8 +93,8 @@ const Home = () => {
                   <a href='/post-form'>View</a>
                 </li>
                 <li style={styles}>
-                  Reminder App &nbsp;| &nbsp;
-                  <a href='/reminder-app'>View</a>
+                  Chart &nbsp;| &nbsp;
+                  <a href='/chart'>View</a>
                 </li>
               </ol>
             </div>
