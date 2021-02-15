@@ -13,6 +13,9 @@ import MusicAlbums from './components/pages/MusicAlbums';
 import SearchForm from './components/pages/SearchForm';
 import PostForm from './components/pages/PostForm';
 import Chart from './components/pages/Chart';
+import ReactTestingLibrary from './components/pages/ReactTestingLibrary';
+import Clickers from './components/pages/Clickers';
+import Fetch from './components/pages/Fetch';
 import Navigation from './components/layout/Navigation';
 import './App.css';
 
@@ -43,6 +46,13 @@ function App() {
           <Route exact path='/search-form' component={SearchForm} />
           <Route exact path='/post-form' component={PostForm} />
           <Route exact path='/chart' component={Chart} />
+          <Route
+            exact
+            path='/react-testing-library'
+            component={ReactTestingLibrary}
+          />
+          <Route exact path='/clickers' component={Clickers} />
+          <Route exact path='/fetch' component={Fetch} />
         </Switch>
       </div>
     </Router>

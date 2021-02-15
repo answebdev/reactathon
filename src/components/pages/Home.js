@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div data-testid='home-component'>
       <Helmet>
         <title>Reactathon</title>
       </Helmet>
@@ -95,6 +95,18 @@ const Home = () => {
                 <li style={styles}>
                   Chart &nbsp;| &nbsp;
                   <a href='/chart'>View</a>
+                </li>
+                <li style={styles}>
+                  React Testing Library &nbsp;| &nbsp;
+                  <a href='/react-testing-library'>View</a>
+                </li>
+                <li style={styles}>
+                  Clickers &nbsp;| &nbsp;
+                  <a href='/clickers'>View</a>
+                </li>
+                <li style={styles}>
+                  Fetch &nbsp;| &nbsp;
+                  <a href='/fetch'>View</a>
                 </li>
               </ol>
             </div>

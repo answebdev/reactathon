@@ -25,6 +25,11 @@ class SearchForm extends Component {
       });
   }
 
+  getIt() {
+    return () => {
+      axios.get('http://localhost:3000');
+    };
+  }
   // window.location = '/search-results' redirects to a page with the path '/search-results' after submitting.
   // Need to create a new file and add it to App.js like this:  <Route exact path='/search-results' component={SearchResults} />
   // Source: https://medium.com/@gazzaazhari/simple-form-submission-fetching-on-react-js-using-axios-8e106d3248eb

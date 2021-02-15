@@ -22,9 +22,9 @@ const Chart = () => {
         <title>Reactathon | Chart</title>
       </Helmet>
       <Container>
-        <div className='App'>
+        <div style={{ marginBottom: '40px' }} className='App'>
           <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-            <strong>Customer App</strong>
+            <strong>Chart</strong>
           </h3>
           <div>
             <p style={styles}>

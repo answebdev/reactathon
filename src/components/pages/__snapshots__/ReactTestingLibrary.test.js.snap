@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="container"
+    >
+      <div
+        class="App"
+        style="margin-bottom: 40px;"
+      >
+        <h3
+          style="margin-top: 40px; margin-bottom: 20px;"
+        >
+          <strong>
+            React Testing Library
+          </strong>
+        </h3>
+        <div>
+          <p
+            style="font-size: 16px;"
+          >
+            View the video 
+            <a
+              href="https://www.youtube.com/watch?v=YQLn7ycfzEo"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              here
+            </a>
+            . See the article and code 
+            <a
+              href="https://www.leighhalliday.com/introduction-react-testing-library"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              here
+            </a>
+            .
+          </p>
+          <p
+            style="font-size: 16px;"
+          >
+            Resources:
+          </p>
+          <ul>
+            <li>
+              Testing Library  |  
+              <a
+                href="https://testing-library.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View
+              </a>
+            </li>
+            <li>
+              React Testing Library (NPM)  |  
+              <a
+                href="https://www.npmjs.com/package/@testing-library/react"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View
+              </a>
+            </li>
+            <li>
+              Jest-Dom (adds on different 'expects' we can use with Jest - little helpers)  |  
+              <a
+                href="https://github.com/testing-library/jest-dom"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View
+              </a>
+            </li>
+          </ul>
+          <p />
+          <hr />
+          <header>
+            <h1
+              class="fancy-h1"
+              data-testid="h1tag"
+            >
+              Hello!
+            </h1>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
