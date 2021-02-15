@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup, waitForElement } from '@testing-library/react';
+import { render, cleanup, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import axiosMock from 'axios';
 //import axiosMock from '../../__mocks__/axios';
@@ -33,7 +33,10 @@ it('fetches and displays data', async () => {
   // This is why we need 'waitForElement' (Which we imported above).
   // So, we pass in an arrow function that needs to return the element: 'getByTestId('resolved')'.
   // And it this returns a promise, so we want to AWAIT for this to resolve.
-  const resolvedSpan = await waitForElement(() => getByTestId('resolved'));
+
+  // Note: 'waitForElement' is deprecated; use 'waitFor' (be sure to also import 'waitFor' up above)
+  // const resolvedSpan = await waitForElement(() => getByTestId('resolved'));
+  const resolvedSpan = await waitFor(() => getByTestId('resolved'));
 
   // Because we mocked it out above ('hello there'), we can just use that here: 'hello there'.
   expect(resolvedSpan).toHaveTextContent('hello there');

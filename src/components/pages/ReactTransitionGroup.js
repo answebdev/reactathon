@@ -128,7 +128,12 @@ class ReactTransitionGroup extends Component {
                 >
                   Prev
                 </button>
-                <button style={btn} type='submit' onClick={this.handleInfo}>
+                <button
+                  data-testid='handle-info'
+                  style={btn}
+                  type='submit'
+                  onClick={this.handleInfo}
+                >
                   Page Info
                 </button>
               </div>

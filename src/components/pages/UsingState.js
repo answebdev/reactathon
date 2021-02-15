@@ -54,7 +54,6 @@ class UsingState extends Component {
               modaled={this.modalHandler}
             />
             <UsingStateModal
-              data-testid='modal'
               show={this.state.modal}
               modalClosed={this.modalCloseHandler}
             />
