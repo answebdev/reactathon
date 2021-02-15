@@ -1,11 +1,12 @@
 import React from 'react';
-import { render, screen, cleanup } from '@testing-library/react';
+// import { render, screen, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Home from './Home';
 
 // Test React Apps With React Testing Library: https://www.robinwieruch.de/react-testing-library
 
-afterEach(cleanup);
+// afterEach(cleanup);
 
 it('renders home component', () => {
   const { getByTestId } = render(<Home />);

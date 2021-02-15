@@ -29,7 +29,7 @@ class UsingState extends Component {
 
   render() {
     return (
-      <div>
+      <div data-testid='using-state-component'>
         <Helmet>
           <title>Reactathon | Using State</title>
         </Helmet>
@@ -40,10 +40,10 @@ class UsingState extends Component {
             </h3>
             <hr />
 
-            <p style={{ fontSize: '18px' }}>
-              <strong>Text:</strong> {this.state.text}
+            <p data-testid='date' style={{ fontSize: '18px' }}>
+              <strong>Text 1:</strong> {this.state.text}
             </p>
-            <p>
+            <p data-testid='greeting'>
               <strong>Text 2:</strong> {this.state.greeting}
             </p>
             <Button style={{ marginBottom: '20px' }} onClick={this.textHandler}>
@@ -54,6 +54,7 @@ class UsingState extends Component {
               modaled={this.modalHandler}
             />
             <UsingStateModal
+              data-testid='modal'
               show={this.state.modal}
               modalClosed={this.modalCloseHandler}
             />
