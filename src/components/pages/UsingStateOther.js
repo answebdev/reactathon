@@ -11,6 +11,8 @@ const UsingStateOther = (props) => {
           marginBottom: '20px',
           backgroundColor: 'steelblue',
           color: '#ffffff',
+          padding: '5px 10px',
+          borderRadius: '5px',
         }}
         onClick={props.textChange}
       >
@@ -24,6 +26,8 @@ const UsingStateOther = (props) => {
           marginBottom: '20px',
           backgroundColor: buttonColor,
           color: '#ffffff',
+          padding: '5px 10px',
+          borderRadius: '5px',
         }}
         onClick={() => setButtonColor(newButtonColor)}
       >
