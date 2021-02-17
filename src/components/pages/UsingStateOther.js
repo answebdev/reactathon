@@ -42,28 +42,16 @@ const UsingStateOther = (props) => {
         Change Color to {newButtonColor}
       </button>
 
-      {/* <button
-        style={{
-          marginTop: '20px',
-          marginBottom: '20px',
-          backgroundColor: 'dodgerblue',
-          color: '#ffffff',
-          padding: '5px 10px',
-          borderRadius: '5px',
-        }}
-        disabled={disabled}
-      >
-        CLICK
-      </button> */}
       <br />
       <input
-        id='enable-button-checkbox'
+        id='disable-button-checkbox'
         type='checkbox'
         defaultChecked={disabled}
         // For accessibility - so screen readers can see whether or not it's checked:
         aria-checked={disabled}
         onChange={(e) => setDisabled(e.target.checked)}
       />
+      <label htmlFor='disable-button-checkbox'>&nbsp;Disable button</label>
     </div>
   );
 };

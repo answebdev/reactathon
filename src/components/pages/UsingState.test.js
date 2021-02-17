@@ -77,13 +77,19 @@ test('initial conditions', () => {
 test('Checkbox disables button on first click and enables on second click', () => {
   render(<UsingStateOther />);
   // Define checkbox and button.
-  const checkbox = screen.getByRole('checkbox');
+  //   const checkbox = screen.getByRole('checkbox');
+
+  // We can also use the 'name' option on a checkbox, as we do with buttons:
+  const checkbox = screen.getByRole('checkbox', { name: 'Disable button' });
 
   // This line makes the test fail -->
   // TestingLibraryElementError: Found multiple elements with the role "button" (because this is also done above)
   // const button = screen.getByRole('button');
   // Instead, use 'getByText' to get it to pass:
-  const button = screen.getByText('Change Color to blue');
+  // const button = screen.getByText('Change Color to blue');
+
+  // Or we can specify which button by adding the name:
+  const button = screen.getByRole('button', { name: 'Change Color to blue' });
 
   // Fire click event on checkbox and expect button to be disabled.
   fireEvent.click(checkbox);
@@ -93,3 +99,5 @@ test('Checkbox disables button on first click and enables on second click', () =
   fireEvent.click(checkbox);
   expect(button).toBeEnabled();
 });
+
+// Add label to checkbox to make it easier to find, even if there are other checkboxes on the page.
