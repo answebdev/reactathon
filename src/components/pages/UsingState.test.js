@@ -3,6 +3,7 @@ import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import UsingState from './UsingState';
 import UsingStateOther from './UsingStateOther';
+import { replaceCamelWithSpaces } from './UsingStateOther';
 
 afterEach(cleanup);
 
@@ -129,4 +130,21 @@ test('Clicked disabled button has gray background and reverts to blue', () => {
   // Re-enable button
   fireEvent.click(checkbox);
   expect(button).toHaveStyle('background-color: blue');
+});
+
+// Unit Testing a Function: 'replaceCamelWithSpaces' (need to import this above).
+// Combine tests in a 'describe' statement ('describe' is a way of grouping tests).
+describe('spaces before camel-case capital letters', () => {
+  test('Works for no inner capital letters', () => {
+    // Pass the color name ('colorName') of 'Red' into the function and expect it to be 'Red'.
+    expect(replaceCamelWithSpaces('Red')).toBe('Red');
+  });
+  // Pass the color name ('colorName') of 'MidnightBlue' into the function and expect it to be 'Midnight Blue' (note the space).
+  test('Works for one inner capital letter', () => {
+    expect(replaceCamelWithSpaces('MidnightBlue')).toBe('Midnight Blue');
+  });
+  // Pass the color name ('colorName') of 'MediumVioletRed' into the function and expect it to be 'Medium Violet Red' (note the spaces).
+  test('Works for multiple inner capital letters', () => {
+    expect(replaceCamelWithSpaces('MediumVioletRed')).toBe('Medium Violet Red');
+  });
 });
