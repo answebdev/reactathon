@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const UsingStateOther = (props) => {
   const [buttonColor, setButtonColor] = useState('red');
+  const [disabled, setDisabled] = useState(false);
+
   const newButtonColor = buttonColor === 'red' ? 'blue' : 'red';
 
   return (
@@ -21,22 +23,47 @@ const UsingStateOther = (props) => {
 
       <br />
 
+      <button onClick={props.modaled}>MODAL</button>
+
+      <br />
+
       <button
         style={{
+          marginTop: '20px',
           marginBottom: '20px',
           backgroundColor: buttonColor,
           color: '#ffffff',
           padding: '5px 10px',
           borderRadius: '5px',
         }}
+        disabled={disabled}
         onClick={() => setButtonColor(newButtonColor)}
       >
         Change Color to {newButtonColor}
       </button>
 
+      {/* <button
+        style={{
+          marginTop: '20px',
+          marginBottom: '20px',
+          backgroundColor: 'dodgerblue',
+          color: '#ffffff',
+          padding: '5px 10px',
+          borderRadius: '5px',
+        }}
+        disabled={disabled}
+      >
+        CLICK
+      </button> */}
       <br />
-
-      <button onClick={props.modaled}>MODAL</button>
+      <input
+        id='enable-button-checkbox'
+        type='checkbox'
+        defaultChecked={disabled}
+        // For accessibility - so screen readers can see whether or not it's checked:
+        aria-checked={disabled}
+        onChange={(e) => setDisabled(e.target.checked)}
+      />
     </div>
   );
 };

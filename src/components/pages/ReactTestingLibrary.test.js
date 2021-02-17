@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ReactTestingLibrary from './ReactTestingLibrary';
 
@@ -9,6 +9,15 @@ import ReactTestingLibrary from './ReactTestingLibrary';
 // Call the 'cleanup' function after each test to clean things up.
 afterEach(cleanup);
 
+// Basic Render Test
+describe('React Testing Library Page', () => {
+  test('renders react testing library component', () => {
+    render(<ReactTestingLibrary />);
+    screen.debug();
+  });
+});
+
+// Snapshot Test
 it('renders', () => {
   const { asFragment } = render(<ReactTestingLibrary text='Hello!' />);
   expect(asFragment()).toMatchSnapshot();

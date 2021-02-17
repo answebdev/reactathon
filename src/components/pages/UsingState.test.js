@@ -59,3 +59,37 @@ it('changes greeting', () => {
   // Use 'Goodbye' in 'toHaveTextContent' because when we click the 'Change Greeting' button, the text should change to 'Goodbye'.
   expect(getByTestId('greeting')).toHaveTextContent('Goodbye');
 });
+
+// Button / Checkbox Tests.
+test('initial conditions', () => {
+  render(<UsingStateOther />);
+  // Find button.
+  const button = screen.getByRole('button', { name: 'Change Color to blue' });
+  // Check that button is enabled: use the 'toBeEnabled()' matcher.
+  // If you're not sure which matcher to use, check the 'Jest DOM' docs: https://github.com/testing-library/jest-dom
+  expect(button).toBeEnabled();
+  // Find the checkbox (a checkbox's role is 'checkbox').
+  const checkbox = screen.getByRole('checkbox');
+  // Check that the checkbox starts out unchecked.
+  expect(checkbox).not.toBeChecked();
+});
+
+test('Checkbox disables button on first click and enables on second click', () => {
+  render(<UsingStateOther />);
+  // Define checkbox and button.
+  const checkbox = screen.getByRole('checkbox');
+
+  // This line makes the test fail -->
+  // TestingLibraryElementError: Found multiple elements with the role "button" (because this is also done above)
+  // const button = screen.getByRole('button');
+  // Instead, use 'getByText' to get it to pass:
+  const button = screen.getByText('Change Color to blue');
+
+  // Fire click event on checkbox and expect button to be disabled.
+  fireEvent.click(checkbox);
+  expect(button).toBeDisabled();
+
+  // Fire click event on checkbox and expect button to be enabled.
+  fireEvent.click(checkbox);
+  expect(button).toBeEnabled();
+});
