@@ -100,4 +100,33 @@ test('Checkbox disables button on first click and enables on second click', () =
   expect(button).toBeEnabled();
 });
 
-// Add label to checkbox to make it easier to find, even if there are other checkboxes on the page.
+test('Disabled button has gray background and reverts to red', () => {
+  render(<UsingStateOther />);
+  const checkbox = screen.getByRole('checkbox', { name: 'Disable button' });
+  const button = screen.getByRole('button', { name: 'Change Color to blue' });
+
+  // Disable button
+  fireEvent.click(checkbox);
+  expect(button).toHaveStyle('background-color: gray');
+
+  // Re-enable button
+  fireEvent.click(checkbox);
+  expect(button).toHaveStyle('background-color: red');
+});
+
+test('Clicked disabled button has gray background and reverts to blue', () => {
+  render(<UsingStateOther />);
+  const checkbox = screen.getByRole('checkbox', { name: 'Disable button' });
+  const button = screen.getByRole('button', { name: 'Change Color to blue' });
+
+  // Change button to blue
+  fireEvent.click(button);
+
+  // Disable button
+  fireEvent.click(checkbox);
+  expect(button).toHaveStyle('background-color: gray');
+
+  // Re-enable button
+  fireEvent.click(checkbox);
+  expect(button).toHaveStyle('background-color: blue');
+});

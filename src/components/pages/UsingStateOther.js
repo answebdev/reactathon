@@ -31,7 +31,7 @@ const UsingStateOther = (props) => {
         style={{
           marginTop: '20px',
           marginBottom: '20px',
-          backgroundColor: buttonColor,
+          backgroundColor: disabled ? 'gray' : buttonColor,
           color: '#ffffff',
           padding: '5px 10px',
           borderRadius: '5px',
