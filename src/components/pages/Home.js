@@ -85,6 +85,10 @@ const Home = () => {
                   <a href='/music-albums'>View</a>
                 </li>
                 <li style={styles}>
+                  Search Filter &nbsp;| &nbsp;
+                  <a href='/search-filter'>View</a>
+                </li>
+                <li style={styles}>
                   Search Form &nbsp;| &nbsp;
                   <a href='/search-form'>View</a>
                 </li>

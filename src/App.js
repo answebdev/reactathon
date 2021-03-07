@@ -10,6 +10,7 @@ import ReactTransitionGroup from './components/pages/ReactTransitionGroup';
 import UsingState from './components/pages/UsingState';
 import PasswordGenerator from './components/pages/PasswordGenerator';
 import MusicAlbums from './components/pages/MusicAlbums';
+import SearchFilter from './components/pages/SearchFilter';
 import SearchForm from './components/pages/SearchForm';
 import PostForm from './components/pages/PostForm';
 import Chart from './components/pages/Chart';
@@ -43,6 +44,7 @@ function App() {
             component={PasswordGenerator}
           />
           <Route exact path='/music-albums' component={MusicAlbums} />
+          <Route exact path='/search-filter' component={SearchFilter} />
           <Route exact path='/search-form' component={SearchForm} />
           <Route exact path='/post-form' component={PostForm} />
           <Route exact path='/chart' component={Chart} />
