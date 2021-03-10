@@ -6,7 +6,6 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.1",
-    "babel-loader": "^8.0.4",
     "babel-preset-react-app": "^5.0.4",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
