@@ -10,6 +10,8 @@ import ReactTransitionGroup from './components/pages/ReactTransitionGroup';
 import UsingState from './components/pages/UsingState';
 import PasswordGenerator from './components/pages/PasswordGenerator';
 import MusicAlbums from './components/pages/MusicAlbums';
+import MusicAlbumsDynamicRouting from './components/pages/MusicAlbumsDynamicRouting';
+import Artist from './components/pages/Artist';
 import SearchFilter from './components/pages/SearchFilter';
 import SearchForm from './components/pages/SearchForm';
 import PostForm from './components/pages/PostForm';
@@ -44,6 +46,17 @@ function App() {
             component={PasswordGenerator}
           />
           <Route exact path='/music-albums' component={MusicAlbums} />
+          <Route
+            exact
+            path='/music-albums-dynamic-routing'
+            component={MusicAlbumsDynamicRouting}
+          />
+
+          <Route
+            exact
+            path='/music-albums-dynamic-routing/:id'
+            component={Artist}
+          />
           <Route exact path='/search-filter' component={SearchFilter} />
           <Route exact path='/search-form' component={SearchForm} />
           <Route exact path='/post-form' component={PostForm} />

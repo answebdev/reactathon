@@ -85,13 +85,17 @@ const Home = () => {
                   <a href='/music-albums'>View</a>
                 </li>
                 <li style={styles}>
+                  Music Albums (with Dynamic Routing) &nbsp;| &nbsp;
+                  <a href='/music-albums-dynamic-routing'>View</a>
+                </li>
+                <li style={styles}>
                   Search Filter &nbsp;| &nbsp;
                   <a href='/search-filter'>View</a>
                 </li>
-                <li style={styles}>
+                {/* <li style={styles}>
                   Search Form &nbsp;| &nbsp;
                   <a href='/search-form'>View</a>
-                </li>
+                </li> */}
                 <li style={styles}>
                   Post Form &nbsp;| &nbsp;
                   <a href='/post-form'>View</a>
@@ -100,18 +104,18 @@ const Home = () => {
                   Chart &nbsp;| &nbsp;
                   <a href='/chart'>View</a>
                 </li>
-                <li style={styles}>
+                {/* <li style={styles}>
                   React Testing Library &nbsp;| &nbsp;
                   <a href='/react-testing-library'>View</a>
-                </li>
+                </li> */}
                 <li style={styles}>
                   Clickers &nbsp;| &nbsp;
                   <a href='/clickers'>View</a>
                 </li>
-                <li style={styles}>
+                {/* <li style={styles}>
                   Fetch &nbsp;| &nbsp;
                   <a href='/fetch'>View</a>
-                </li>
+                </li> */}
               </ol>
             </div>
           </Col>
