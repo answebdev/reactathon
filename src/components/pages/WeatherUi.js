@@ -5,7 +5,7 @@ import React, { Fragment, useState } from 'react';
 function WeatherUi(props) {
   const { data } = props;
   const iconurl =
-    'https://api.allorigins.win/raw?url=https://openweathermap.org/img/w/' +
+    'https://openweathermap.org/img/w/' +
     `${data.cod !== 404 ? data.weather[0].icon : null}` +
     '.png';
 

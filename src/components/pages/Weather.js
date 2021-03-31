@@ -15,7 +15,7 @@ const Weather = () => {
     country: '',
   });
 
-  const APIKEY = process.env.REACT_APP_WEATHER_API_KEY;
+  const APIKEY = '016af1d0bf77f0007d077f39dc84b387';
 
   async function fetchWeather(e) {
     e.preventDefault();
