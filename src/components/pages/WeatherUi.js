@@ -41,11 +41,11 @@ function WeatherUi(props) {
             <span>{cel}</span>
 
             <span style={{ textTransform: 'capitalize' }}>
-              {data.weather.main}
+              {data.weather[0].main}
             </span>
             <img src={iconurl} alt='' srcset='' />
             <span style={{ textTransform: 'capitalize' }}>
-              {data.weather.description}
+              {data.weather[0].description}
             </span>
           </div>
           <div>
