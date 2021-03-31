@@ -92,6 +92,14 @@ const Home = () => {
                   Search Filter &nbsp;| &nbsp;
                   <a href='/search-filter'>View</a>
                 </li>
+                <li style={styles}>
+                  Countries &nbsp;| &nbsp;
+                  <a href='/countries'>View</a>
+                </li>
+                <li style={styles}>
+                  Weather &nbsp;| &nbsp;
+                  <a href='/weather'>View</a>
+                </li>
                 {/* <li style={styles}>
                   Search Form &nbsp;| &nbsp;
                   <a href='/search-form'>View</a>

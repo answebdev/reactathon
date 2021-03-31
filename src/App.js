@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/pages/Home';
@@ -13,6 +14,9 @@ import MusicAlbums from './components/pages/MusicAlbums';
 import MusicAlbumsDynamicRouting from './components/pages/MusicAlbumsDynamicRouting';
 import Artist from './components/pages/Artist';
 import SearchFilter from './components/pages/SearchFilter';
+import Countries from './components/pages/Countries';
+import CountryDetail from './components/pages/CountryDetail';
+import Weather from './components/pages/Weather';
 import SearchForm from './components/pages/SearchForm';
 import PostForm from './components/pages/PostForm';
 import Chart from './components/pages/Chart';
@@ -58,6 +62,9 @@ function App() {
             component={Artist}
           />
           <Route exact path='/search-filter' component={SearchFilter} />
+          <Route exact path='/countries' component={Countries} />
+          <Route exact path='/countries/:id' component={CountryDetail} />
+          <Route exact path='/weather' component={Weather} />
           <Route exact path='/search-form' component={SearchForm} />
           <Route exact path='/post-form' component={PostForm} />
           <Route exact path='/chart' component={Chart} />
@@ -74,4 +81,4 @@ function App() {
   );
 }
 
-export default App;
+export default hot(App);
