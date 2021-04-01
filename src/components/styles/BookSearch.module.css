@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.ResultsDiv {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 20px;
+}
+
+.Book {
+  width: 25%;
+  font-size: 1rem;
+  padding: 2em;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.Image {
+  margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  /* .Input {
+      width: 100%;
+    } */
+  .Book {
+    flex-direction: column;
+    gap: 1em;
+    width: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Book {
+    gap: 1em;
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .Book {
+    flex-direction: column;
+    gap: 1em;
+    width: 65%;
+  }
+}
+
+@media (max-width: 376px) {
+  .Book {
+    flex-direction: column;
+    gap: 1em;
+    width: 50%;
+  }
+}
+
+@media (max-width: 280px) {
+  .Book {
+    flex-direction: column;
+    gap: 1em;
+    width: 50%;
+  }
+
+  img {
+    height: 55px;
+    width: auto;
+  }
+}

@@ -17,6 +17,7 @@ import SearchFilter from './components/pages/SearchFilter';
 import Countries from './components/pages/Countries';
 import CountryDetail from './components/pages/CountryDetail';
 import Weather from './components/pages/Weather';
+import BookSearch from './components/pages/BookSearch';
 import SearchForm from './components/pages/SearchForm';
 import PostForm from './components/pages/PostForm';
 import Chart from './components/pages/Chart';
@@ -65,6 +66,7 @@ function App() {
           <Route exact path='/countries' component={Countries} />
           <Route exact path='/countries/:id' component={CountryDetail} />
           <Route exact path='/weather' component={Weather} />
+          <Route exact path='/book-search' component={BookSearch} />
           <Route exact path='/search-form' component={SearchForm} />
           <Route exact path='/post-form' component={PostForm} />
           <Route exact path='/chart' component={Chart} />

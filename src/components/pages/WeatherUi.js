@@ -62,36 +62,36 @@ function WeatherUi(props) {
                     </span>
                   </td>
                 </tr>
-                {/* <tr>
+                <tr>
                   <td>
                     <h4>Humidity</h4>
                   </td>
                   <td>
                     <span>{data.main.humidity} %</span>
                   </td>
-                </tr> */}
-                {/* <tr>
+                </tr>
+                <tr>
                   <td>
                     <h4>Pressure</h4>
                   </td>
                   <td>
                     <span>{data.main.pressure} hPa</span>
                   </td>
-                </tr> */}
-                {/* <tr>
+                </tr>
+                <tr>
                   <td>
                     <h4>Visibility</h4>
                   </td>
                   <td>
                     <span>{data.visibility / 1000} Km</span>
                   </td>
-                </tr> */}
+                </tr>
               </table>
             </div>
 
             <div>
               <table>
-                {/* <tr>
+                <tr>
                   <td>
                     <h4>Wind</h4>
                   </td>
@@ -109,7 +109,7 @@ function WeatherUi(props) {
                       <sup>o</sup> deg
                     </span>
                   </td>
-                </tr> */}
+                </tr>
                 <tr>
                   <td>
                     <h4>Sunrise</h4>

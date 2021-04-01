@@ -100,6 +100,10 @@ const Home = () => {
                   Weather &nbsp;| &nbsp;
                   <a href='/weather'>View</a>
                 </li>
+                <li style={styles}>
+                  Book Search &nbsp;| &nbsp;
+                  <a href='/book-search'>View</a>
+                </li>
                 {/* <li style={styles}>
                   Search Form &nbsp;| &nbsp;
                   <a href='/search-form'>View</a>
