@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import Spinner from '../misc/Spinner';
+// import Spinner from '../misc/Spinner';
 import classes from '../styles/BookSearch.module.css';
 import axios from 'axios';
 
@@ -11,24 +11,26 @@ const BookSearch = () => {
   const [result, setResult] = useState([]);
   const apiKey = process.env.REACT_APP_BOOKS_API_KEY;
 
-  function handleChange(e) {
+  const handleChange = (e) => {
     const book = e.target.value;
     setBook(book);
-  }
+  };
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(book);
     axios
       .get(
         `https://www.googleapis.com/books/v1/volumes?q=${book}&key=${apiKey}&maxResults=40`
       )
-
       .then((data) => {
         console.log(data.data.items);
         setResult(data.data.items);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-  }
+  };
 
   return (
     <div className={classes.Container}>
@@ -36,16 +38,23 @@ const BookSearch = () => {
         <title>Reactathon | Book Search</title>
       </Helmet>
 
-      <div>
+      <div className={classes.Form}>
         <form onSubmit={handleSubmit}>
           <input
+            className={classes.Input}
             type='text'
-            onChange={handleChange}
+            onChange={(e) => handleChange(e)}
             placeholder='Search Books'
             autoComplete='off'
           />
           &nbsp;&nbsp;
-          <button type='submit'>Search</button>
+          <button
+            className={classes.SearchBtn}
+            onChange={(e) => handleChange(e)}
+            type='submit'
+          >
+            Search
+          </button>
         </form>
       </div>
 
