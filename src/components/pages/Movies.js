@@ -60,7 +60,22 @@ const Movies = () => {
     // Any value that goes in these square brackets causes the 'useEffect' hook to run.
   }, [searchValue]);
 
-  // Save Local Storage
+  // A good thing to use is the 'useEffect' hook, since the 'useEffect' hook always runs when the app loads for the first time.
+  useEffect(() => {
+    // When we save it to local storage, it is saved as a string (see below - we used JSON.stringify), so we need to convert it to an object when we retrieve it using JSON.parse.
+    const movieFavorites = JSON.parse(
+      localStorage.getItem('react-movie-app-favorites')
+    );
+
+    if (movieFavorites) {
+      setFavorites(movieFavorites);
+    }
+
+    // We only want this retrieval to happen when the page loads (when the app first runs),
+    // so we pass in an empty array.
+  }, []);
+
+  // Save to Local Storage
   const saveToLocalStorage = (items) => {
     // We need to set a 'key'. A key is what we use to retrieve and receive items from local storage.
     // Here, the key is called 'react-movie-app-favorites'.
@@ -76,21 +91,6 @@ const Movies = () => {
   // we will still not be able to see our saved movies when we refresh the page.
   // We also need to retrieve the movies from local storage whenver the app is refreshed and renders again.
   // So we need this functionality as well.
-
-  // A good thing to use is the 'useEffect' hook, since the 'useEffect' hook always runs when the app loads for the first time.
-  useEffect(() => {
-    // When we save it to local storage, it is saved as a string (see above - we used JSON.stringify), so we need to convert it to an object when we retrieve it using JSON.parse.
-    const movieFavorites = JSON.parse(
-      localStorage.getItem('react-movie-app-favorites')
-    );
-
-    if (movieFavorites) {
-      setMovies(movieFavorites);
-    }
-
-    // We only want this retrieval to happen when the page loads (when the app first runs),
-    // so we pass in an empty array.
-  }, []);
 
   const addFavoriteMovie = (movie) => {
     // Make a copy of the current state array using the spread operator => '...favorites' ('favorites' is our current state variable).
