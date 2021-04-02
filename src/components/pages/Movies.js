@@ -26,9 +26,11 @@ const Movies = () => {
   const [favorites, setFavorites] = useState([]);
   const [searchValue, setSearchValue] = useState('');
 
+  const APIKEY = process.env.REACT_APP_MOVIE_API_KEY;
+
   const getMovieRequest = async (searchValue) => {
     // const url = `http://www.omdbapi.com/?s=avengers&apikey=31264601`;
-    const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=31264601`;
+    const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=${APIKEY}`;
 
     const response = await fetch(url);
     // Convert to JSON
