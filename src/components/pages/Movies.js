@@ -85,7 +85,9 @@ const Movies = () => {
       localStorage.getItem('react-movie-app-favorites')
     );
 
-    setFavorites(movieFavorites);
+    if (movieFavorites) {
+      setMovies(movieFavorites);
+    }
 
     // We only want this retrieval to happen when the page loads (when the app first runs),
     // so we pass in an empty array.
@@ -151,11 +153,11 @@ const Movies = () => {
           <MovieListHeading heading='Favorites' />
         </Row>
         <Row>
-          {/* <MovieList
+          <MovieList
             movies={favorites}
             handleFavorites={removeFavoriteMovie}
             favoriteComponent={MovieRemoveFavorites}
-          /> */}
+          />
         </Row>
       </Container>
     </div>
