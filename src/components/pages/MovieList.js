@@ -6,7 +6,7 @@ const MovieList = (props) => {
 
   return (
     <div className={classes.Fragment}>
-      {props.movies.map((movie) => (
+      {props.movies.map((movie, index) => (
         <div className={classes.ImageContainer}>
           <img src={movie.Poster} alt='movie'></img>
           <div

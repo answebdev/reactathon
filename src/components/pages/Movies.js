@@ -151,11 +151,11 @@ const Movies = () => {
           <MovieListHeading heading='Favorites' />
         </Row>
         <Row>
-          <MovieList
+          {/* <MovieList
             movies={favorites}
             handleFavorites={removeFavoriteMovie}
             favoriteComponent={MovieRemoveFavorites}
-          />
+          /> */}
         </Row>
       </Container>
     </div>
