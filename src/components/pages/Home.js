@@ -104,10 +104,10 @@ const Home = () => {
                   Book Search &nbsp;| &nbsp;
                   <a href='/book-search'>View</a>
                 </li>
-                {/* <li style={styles}>
-                  Search Form &nbsp;| &nbsp;
-                  <a href='/search-form'>View</a>
-                </li> */}
+                <li style={styles}>
+                  Movies &nbsp;| &nbsp;
+                  <a href='/movies'>View</a>
+                </li>
                 <li style={styles}>
                   Post Form &nbsp;| &nbsp;
                   <a href='/post-form'>View</a>

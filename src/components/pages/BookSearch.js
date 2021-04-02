@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 // import Spinner from '../misc/Spinner';
 import classes from '../styles/BookSearch.module.css';
 import axios from 'axios';
-
-// Source: https://www.youtube.com/watch?v=LGcgChoD_qY
 
 const BookSearch = () => {
   const [book, setBook] = useState('');
@@ -60,7 +59,7 @@ const BookSearch = () => {
 
       <div className={classes.ResultsDiv}>
         {result.map((book) => (
-          <div className={classes.Book}>
+          <div key={book.id} className={classes.Book}>
             <div className={classes.Image}>
               <a
                 rel='noopener noreferrer'
@@ -77,6 +76,9 @@ const BookSearch = () => {
             <p>
               <strong>Title:</strong> {book.volumeInfo.title}
             </p>
+            {/* <p>
+              <strong>ID:</strong> {book.id}
+            </p> */}
             {/* <p>Text Snippet: {book.searchInfo.textSnippet}</p> */}
             <p>
               <strong>Author(s):</strong> {book.volumeInfo.authors}
@@ -85,9 +87,15 @@ const BookSearch = () => {
               <strong>Publisher:</strong> {book.volumeInfo.publisher}
             </p>
             <p>
+              <strong>Pages:</strong> {book.volumeInfo.pageCount}
+            </p>
+            <p>
               <strong>Date Published:</strong> {book.volumeInfo.publishedDate}
             </p>
             {/* <p>Description: {book.volumeInfo.description}</p> */}
+            <Link className={classes.Link} to={`books/${book.id}`}>
+              View
+            </Link>
           </div>
         ))}
       </div>

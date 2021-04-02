@@ -1,0 +1,56 @@
+.MovieApp > .Row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.Fragment {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.ImageContainer {
+  position: relative;
+  transition: transform 0.2s;
+  margin-bottom: 40px;
+}
+
+.ImageContainer:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.ImageContainer:hover .Overlay {
+  opacity: 1;
+}
+
+.Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: rgb(0, 0, 0, 0.8);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.Child {
+  display: flex;
+  align-items: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.FavSpan {
+  margin-right: 5px;
+}
+
+.RemoveSpan {
+  margin-right: 5px;
+}
