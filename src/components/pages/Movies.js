@@ -18,9 +18,6 @@ import MovieRemoveFavorites from './MovieRemoveFavorites';
 
 // Similar: https://www.youtube.com/watch?v=1eO_hNYzaSc
 
-// OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=31264601
-// Key: 31264601
-
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -29,7 +26,7 @@ const Movies = () => {
   const APIKEY = process.env.REACT_APP_MOVIE_API_KEY;
 
   const getMovieRequest = async (searchValue) => {
-    // const url = `http://www.omdbapi.com/?s=avengers&apikey=31264601`;
+    // const url = `http://www.omdbapi.com/?s=avengers&apikey=${APIKEY}`;
     const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=${APIKEY}`;
 
     const response = await fetch(url);
