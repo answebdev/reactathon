@@ -24,6 +24,7 @@ import PostForm from './components/pages/PostForm';
 import Chart from './components/pages/Chart';
 import ReactTestingLibrary from './components/pages/ReactTestingLibrary';
 import Clickers from './components/pages/Clickers';
+import ReduxHooks from './components/pages/ReduxHooks';
 import Fetch from './components/pages/Fetch';
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -78,6 +79,7 @@ function App() {
             component={ReactTestingLibrary}
           />
           <Route exact path='/clickers' component={Clickers} />
+          <Route exact path='/redux-hooks' component={ReduxHooks} />
           <Route exact path='/fetch' component={Fetch} />
         </Switch>
       </div>

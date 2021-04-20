@@ -124,6 +124,10 @@ const Home = () => {
                   Clickers &nbsp;| &nbsp;
                   <a href='/clickers'>View</a>
                 </li>
+                <li style={styles}>
+                  Redux Hooks &nbsp;| &nbsp;
+                  <a href='/redux-hooks'>View</a>
+                </li>
                 {/* <li style={styles}>
                   Fetch &nbsp;| &nbsp;
                   <a href='/fetch'>View</a>
