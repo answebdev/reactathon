@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 const Clickers = () => {
   const [count, setCount] = useState(0);
+  const [isSecret, setIsSecret] = useState(false);
   const message = useSelector((state) => state.message);
   const dispatch = useDispatch();
 
@@ -77,9 +78,12 @@ const Clickers = () => {
               <p>
                 <strong>SECRET MESSAGE:</strong> {message}
               </p>
-              <button onClick={() => dispatch({ type: 'REVERSE_MESSAGE' })}>
-                {/* {isSecret ? 'DECIPHER' : 'CODE'} */}
-                SMASH
+              <button
+                onClick={() =>
+                  dispatch({ type: 'REVERSE_MESSAGE' }, setIsSecret(!isSecret))
+                }
+              >
+                {isSecret ? 'REVERSE IT' : 'DECIPHER'}
               </button>
             </div>
           </div>
