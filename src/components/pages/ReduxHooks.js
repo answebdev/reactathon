@@ -69,12 +69,12 @@ const ReduxHooks = () => {
               <strong>Counter:</strong> {counter}
             </h3>
             <br />
-            <button onClick={() => dispatch({ type: 'INCREMENT' })}>
-              INCREMENT
-            </button>
-            &nbsp;
             <button onClick={() => dispatch({ type: 'DECREMENT' })}>
               DECREMENT
+            </button>
+            &nbsp;
+            <button onClick={() => dispatch({ type: 'INCREMENT' })}>
+              INCREMENT
             </button>
           </div>
         </div>

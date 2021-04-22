@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
+import { useSelector, useDispatch } from 'react-redux';
 
-export default function Clickers() {
+const Clickers = () => {
   const [count, setCount] = useState(0);
+  const message = useSelector((state) => state.message);
+  const dispatch = useDispatch();
 
   const increase = () => {
     setCount(count + 1);
@@ -62,16 +65,28 @@ export default function Clickers() {
               .
             </p>
             <hr />
-            <div>
-              <button onClick={increase}>Up</button>
-              <button onClick={decrease}>Down</button>
+            <p>
               <span data-testid='count'>{count}</span>
+            </p>
+            <div>
+              <button onClick={decrease}>Down</button>&nbsp;
+              <button onClick={increase}>Up</button>
+            </div>
+            <br />
+            <div>
+              <p>
+                <strong>SECRET MESSAGE:</strong> {message}
+              </p>
+              <button onClick={() => dispatch({ type: 'REVERSE_MESSAGE' })}>
+                {/* {isSecret ? 'DECIPHER' : 'CODE'} */}
+                SMASH
+              </button>
             </div>
           </div>
         </div>
       </Container>
     </div>
   );
-}
+};
 
-// export default ReactTestingLibrary;
+export default Clickers;
