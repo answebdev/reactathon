@@ -38,7 +38,7 @@ const Movies = () => {
 
     // Without this if-check, we get a 'props.movies is undefined' error.
     // That's because up above, 'searchValue' is set to an empty string initially, when the app loads.
-    // This empy value then gets passed to the request.
+    // This emtpy value then gets passed to the request.
     // And then the request does NOT give us back a search array, because since it's initially an empty string, we did not ask for anything (it's an empty value!).
     // So that's why we get this error.
     // That's why we need this if statement to check.

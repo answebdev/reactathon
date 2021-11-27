@@ -20,6 +20,7 @@ import BookDetails from './components/pages/BookDetails';
 import Weather from './components/pages/Weather';
 import BookSearch from './components/pages/BookSearch';
 import Movies from './components/pages/Movies';
+import MoviesRedux from './components/pages/MoviesRedux';
 import PostForm from './components/pages/PostForm';
 import Chart from './components/pages/Chart';
 import ReactTestingLibrary from './components/pages/ReactTestingLibrary';
@@ -71,6 +72,7 @@ function App() {
           <Route exact path='/book-search' component={BookSearch} />
           <Route exact path='/books/:id' component={BookDetails} />
           <Route exact path='/movies' component={Movies} />
+          <Route exact path='/movies-redux' component={MoviesRedux} />
           <Route exact path='/post-form' component={PostForm} />
           <Route exact path='/chart' component={Chart} />
           <Route

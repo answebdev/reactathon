@@ -109,6 +109,10 @@ const Home = () => {
                   <a href='/movies'>View</a>
                 </li>
                 <li style={styles}>
+                  Movies (Redux) &nbsp;| &nbsp;
+                  <a href='/movies-redux'>View</a>
+                </li>
+                <li style={styles}>
                   Post Form &nbsp;| &nbsp;
                   <a href='/post-form'>View</a>
                 </li>
