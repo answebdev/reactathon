@@ -2,6 +2,7 @@
   "name": "reactathon",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://react-a-thon.netlify.app/",
   "dependencies": {
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.2.2",
