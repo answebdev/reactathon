@@ -2,6 +2,7 @@
   "name": "reactathon",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://react-a-thon.netlify.app/",
   "dependencies": {
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.2.2",
@@ -36,9 +37,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snap",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap"
   },
   "browserslist": {
     "production": [
