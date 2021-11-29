@@ -20,6 +20,7 @@
     "react-helmet": "^6.1.0",
     "react-hot-loader": "^4.13.0",
     "react-map-gl": "^5.2.10",
+    "react-meta-tags": "^1.0.1",
     "react-motion": "^0.5.2",
     "react-places-autocomplete": "^7.3.0",
     "react-redux": "^7.2.3",

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import ogimage from '../../img/reactathon-open-graph.png';
+import MetaTags from 'react-meta-tags';
 import '../styles/Infinite.css';
 
 // Dummy data - array of 25 elements (counts up from 1 to 25) (although your data can come from somehwere, like a server):
@@ -93,6 +95,29 @@ const InfiniteScroll = () => {
       <Helmet>
         <title>Reactathon | Infinite Scroll</title>
       </Helmet>
+
+      <MetaTags>
+        <meta
+          property='og:image'
+          content='%PUBLIC_URL%/reactathon-open-graph.png'
+        />
+        <meta property='og:image:type' content={ogimage} />
+        <meta property='og:image:width' content='1024' />
+        <meta property='og:image:height' content='1024' />
+        <meta property='og:type' content='article' />
+        <meta
+          property='og:url'
+          content='https://react-a-thon.netlify.app/infinite-scroll'
+        />
+        <meta property='og:title' content='Reactathon | Infinite Scroll' />
+        <meta property='og:description' content='Projects made with React.' />
+
+        <meta
+          name='description'
+          content='Reactathon is dedicated to projects made with React.'
+        />
+      </MetaTags>
+
       <Container>
         <div className='App'>
           <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
